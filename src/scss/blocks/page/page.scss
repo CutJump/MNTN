@@ -1,0 +1,30 @@
+@use "../../global/scss-variables" as *;
+
+.page {
+  height: 100%;
+  line-height: 1.15;
+  font-family: "Gilroy", sans-serif;
+}
+
+.page--clip {
+  overflow: hidden;
+
+  @media #{$media-large-breakpoint} {
+    padding-right: 15px;
+  }
+}
+
+.page__body {
+  margin: 0;
+  height: 100%;
+  min-height: 100dvh;
+  background-color: #0b1d26;
+  color: var(--main-font-color);
+}
+
+.page--grid-area {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 100%;
+  grid-auto-rows: min-content;
+}

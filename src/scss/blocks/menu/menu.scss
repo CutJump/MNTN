@@ -1,0 +1,42 @@
+@use "../../global/scss-variables" as *;
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu--gap {
+  margin-left: auto;
+  margin-right: 1rem;
+
+  @media #{$media-large-breakpoint} {
+    margin: 0;
+  }
+}
+
+.menu__btn {
+  padding: 1.125rem;
+  border: none;
+  background-color: transparent;
+  color: var(--main-font-color);
+
+  @media #{$media-large-breakpoint} {
+    display: none;
+  }
+}
+
+@media #{$media-hover-mouse} {
+  .menu__btn:hover {
+    color: var(--link-font-color);
+  }
+}
+
+@media #{$media-hover-mobile} {
+  .menu__btn:active {
+    color: var(--link-font-color);
+  }
+}
+
+.menu__icon {
+  vertical-align: middle;
+}

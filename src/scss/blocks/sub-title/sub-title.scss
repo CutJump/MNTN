@@ -1,0 +1,18 @@
+.sub-title {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  color: var(--sub-title-font-color);
+  font-size: 1.125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.sub-title::before {
+  content: "";
+  display: inline-block;
+  width: 4rem;
+  height: 0.2rem;
+  background-color: var(--sub-title-font-color);
+}

@@ -1,0 +1,12 @@
+/* scss variables */
+
+$media-yes-animation: "(prefers-reduced-motion: no-preference)";
+
+$media-hover-mouse: "(hover: hover) and (pointer: fine)"; // write class:hover
+$media-hover-mobile: "(hover: none) and (pointer: coarse)"; // write class:active
+
+$media-small-breakpoint: "(min-width: 576px)";
+$media-medium-breakpoint: "(min-width: 768px)";
+$media-large-breakpoint: "(min-width: 992px)";
+$media-x-large-breakpoint: "(min-width: 1200px)";
+$media-x-x-large-breakpoint: "(min-width: 1400px)";

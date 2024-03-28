@@ -1,0 +1,27 @@
+/* Global */
+
+@use "./global/fonts";
+@use "./global/box-model";
+@use "./global/css-variables";
+@use "./global/normalize-forms";
+@use "./global/column";
+
+/* Blocks */
+
+@use "./blocks/page/page";
+@use "./blocks/parallax/parallax";
+@use "./blocks/not-parallax/not-parallax";
+@use "./blocks/header/header";
+@use "./blocks/logo/logo";
+@use "./blocks/menu/menu";
+@use "./blocks/nav/nav";
+@use "./blocks/account-btn/account-btn";
+@use "./blocks/main/main";
+@use "./blocks/lead/lead";
+@use "./blocks/title/title";
+@use "./blocks/sub-title/sub-title";
+@use "./blocks/links/links";
+@use "./blocks/swiper/swiper";
+@use "./blocks/article/article";
+@use "./blocks/footer/footer";
+@use "./blocks/description/description";

@@ -1,0 +1,41 @@
+@use "../../global/scss-variables" as *;
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-block: 45px;
+  background-color: #0b1d26;
+}
+
+.footer--layout {
+  padding-inline: 10px;
+  @media #{$media-small-breakpoint} {
+    padding-inline: 20px;
+  }
+  @media #{$media-large-breakpoint} {
+    padding-inline: 40px;
+  }
+  @media #{$media-x-large-breakpoint} {
+    padding-inline: 80px;
+  }
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__text {
+  line-height: 2;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.footer__copyright {
+  line-height: 2;
+  font-size: 1.125rem;
+  font-weight: 500;
+  opacity: 0.5;
+}

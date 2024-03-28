@@ -1,0 +1,31 @@
+@use "../../global/scss-variables" as *;
+
+.title {
+  font-family: "Chronicle Display", serif;
+  font-weight: 600;
+}
+
+.title--h1 {
+  margin-block: 2rem;
+  line-height: 1;
+  font-size: 3rem;
+  text-transform: capitalize;
+
+  @media #{$media-medium-breakpoint} {
+    font-size: 4rem;
+  }
+
+  @media #{$media-x-x-large-breakpoint} {
+    font-size: 5.5rem;
+  }
+}
+
+.title--h2 {
+  margin-block: 1rem;
+  font-size: 3rem;
+
+  @media #{$media-medium-breakpoint} {
+    margin-block: 1.75rem;
+    font-size: 4rem;
+  }
+}

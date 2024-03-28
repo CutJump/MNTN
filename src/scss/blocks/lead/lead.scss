@@ -1,0 +1,56 @@
+@use "../../global/scss-variables" as *;
+
+.lead {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media #{$media-x-large-breakpoint} {
+    align-items: center;
+  }
+}
+
+.lead__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.lead__scroll-btn {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 1rem;
+  padding: 20px;
+  padding-left: 0;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.lead__scroll-icon {
+  @media #{$media-yes-animation} {
+    animation: 1.5s ease-in infinite down-up;
+  }
+}
+
+@keyframes down-up {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0.1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(50%);
+    opacity: 0.1;
+  }
+}

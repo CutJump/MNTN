@@ -1,0 +1,14 @@
+@use "../global/scss-variables" as *;
+.column {
+  margin: 0 auto;
+  padding-inline: 10px;
+  @media #{$media-small-breakpoint} {
+    padding-inline: 20px;
+  }
+  @media #{$media-large-breakpoint} {
+    padding-inline: 40px;
+  }
+  @media #{$media-x-large-breakpoint} {
+    padding-inline: 80px;
+  }
+}

@@ -1,0 +1,39 @@
+@use "../../global/scss-variables" as *;
+
+.account-btn {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 1.125rem;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-weight: bold;
+}
+
+@media #{$media-hover-mouse} {
+  .account-btn:hover {
+    color: var(--link-font-color);
+  }
+}
+
+@media #{$media-hover-mobile} {
+  .account-btn:active {
+    color: var(--link-font-color);
+  }
+}
+
+.account-btn__text {
+  @media (max-width: 991px) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+  }
+}

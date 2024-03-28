@@ -1,0 +1,26 @@
+{
+  "name": "vite-start",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite --emptyOutDir build",
+    "preview": "vite preview"
+  },
+  "browserslist": [
+    "last 2 version",
+    ">0.5%",
+    "not dead"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "sass": "^1.69.5",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "express": "^4.19.1",
+    "lodash": "^4.17.21",
+    "swiper": "^11.0.7"
+  }
+}

@@ -1,0 +1,38 @@
+@use "../../global/scss-variables" as *;
+
+.links {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+  margin: 0;
+}
+
+.links__definition {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.links__description {
+  margin: 0;
+  display: flex;
+}
+
+.links__link {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  color: inherit;
+  text-decoration: none;
+}
+
+@media #{$media-hover-mouse} {
+  .links__link:hover {
+    color: var(--link-font-color);
+  }
+}
+
+@media #{$media-hover-mobile} {
+  .links__link:active {
+    color: var(--link-font-color);
+  }
+}

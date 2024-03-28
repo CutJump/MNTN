@@ -1,0 +1,122 @@
+@use "../../global/scss-variables" as *;
+
+.article {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  counter-increment: article;
+
+  @media #{$media-x-large-breakpoint} {
+    align-items: center;
+  }
+}
+
+.article__content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.article__text {
+  max-width: 632px;
+  padding-right: 3.5rem;
+  line-height: 1.5;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.article__link {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  padding: 1rem;
+  padding-inline-start: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--sub-title-font-color);
+
+  @media #{$media-yes-animation} {
+    transition: color 0.4s;
+  }
+
+  @media #{$media-medium-breakpoint} {
+    margin-block-start: 0.75rem;
+  }
+}
+
+@media #{$media-hover-mouse} {
+  .article__link:hover {
+    color: var(--article--link-hover-font-color);
+  }
+}
+
+@media #{$media-hover-mobile} {
+  .article__link:active {
+    color: var(--article--link-hover-font-color);
+  }
+}
+
+.article__column {
+  height: 100%;
+  display: flex;
+}
+
+.article__column--flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media #{$media-x-large-breakpoint} {
+    margin-left: 3rem;
+  }
+}
+
+.article__img {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateY(-38%);
+  z-index: -1;
+  width: calc(100% + 20px);
+  margin-right: -10px;
+  object-fit: contain;
+  filter: brightness(0.5);
+
+  @media #{$media-small-breakpoint} {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    margin-right: 0;
+  }
+
+  @media #{$media-medium-breakpoint} {
+    display: block;
+    position: static;
+    transform: translateY(0);
+    width: 80%;
+    height: auto;
+    padding-right: 1rem;
+    filter: none;
+  }
+}
+
+.article--counter {
+  position: relative;
+}
+
+.article--counter::after {
+  content: counter(article, decimal-leading-zero);
+  position: absolute;
+  z-index: -1;
+  font-size: 15rem;
+  font-weight: 800;
+  color: var(--main-font-color);
+  opacity: 0.1;
+
+  @media #{$media-x-large-breakpoint} {
+    transform: translateX(-45%);
+  }
+}

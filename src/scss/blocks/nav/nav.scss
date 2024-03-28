@@ -1,0 +1,52 @@
+@use "../../global/scss-variables" as *;
+
+.nav {
+  display: block;
+}
+
+.nav--hidden {
+  display: none;
+
+  @media #{$media-large-breakpoint} {
+    display: block;
+  }
+}
+
+.nav__list {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% - 20px);
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  column-gap: 40px;
+  background-color: #0b1d26;
+
+  @media #{$media-large-breakpoint} {
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+  }
+}
+
+.nav__link {
+  width: 100%;
+  display: inline-block;
+  padding-inline: 10px;
+  padding-block: 20px;
+  line-height: 1;
+  font-weight: 700;
+  color: inherit;
+
+  @media #{$media-small-breakpoint} {
+    padding-inline: 20px;
+  }
+}
+
+.nav__link:hover {
+  color: var(--link-font-color);
+}
